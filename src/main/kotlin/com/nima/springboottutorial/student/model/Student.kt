@@ -1,4 +1,4 @@
-package com.nima.springboottutorial.model
+package com.nima.springboottutorial.student.model
 
 import java.time.LocalDate
 

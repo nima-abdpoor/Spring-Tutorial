@@ -1,6 +1,6 @@
 package com.nima.springboottutorial
 
-import com.nima.springboottutorial.model.Student
+import com.nima.springboottutorial.student.model.Student
 import java.time.LocalDate
 import java.time.Month
 
