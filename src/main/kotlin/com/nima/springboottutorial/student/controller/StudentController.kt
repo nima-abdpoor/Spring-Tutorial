@@ -1,6 +1,5 @@
 package com.nima.springboottutorial.student.controller
 
-import com.nima.springboottutorial.student.model.Student
 import com.nima.springboottutorial.student.service.StudentService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController
 class StudentController(@Autowired private val studentService: StudentService) {
 
     @GetMapping
-    fun getStudent(@RequestParam(value = "number", defaultValue = "5") number: String): List<Student> {
-        return studentService.getStudent(number)
+    fun getStudent(@RequestParam(value = "number", defaultValue = "5") number: String): List<String> {
+        val results = studentService.getStudent(number)
+        println("the final results = $results")
+        return listOf(results.toString())
     }
 }
